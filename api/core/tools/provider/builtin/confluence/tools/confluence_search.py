@@ -1,12 +1,12 @@
-import json
-from datetime import datetime
-from typing import Any, Union
-from urllib.parse import quote
 import base64
+import json
+from typing import Any, Union
+
 # import sys
 # sys.path.append("/home/cd-dz0105489/dyp/rag/dify_up/api")
 import requests
 from yarl import URL
+
 from core.tools.entities.tool_entities import ToolInvokeMessage
 from core.tools.tool.builtin_tool import BuiltinTool
 
@@ -48,7 +48,7 @@ class ConfluenceSearchTool(BuiltinTool):
           
             url = str(URL(base_url) / 'rest' / 'api' / 'content' / 'search')
             query_new = {
-                'cql': '{{text~"{0}"}}'.format(query),
+                'cql': '{{text~"{}"}}'.format(query),
                 #查询语句，text表示查询文本内容，其他标签可以查看官网上的介绍
                 #注：这里有一个坑，这儿的匹配不要写=而是要用~ 否则会出现匹配不到结果的情况
                 'limit':str(top_n),
