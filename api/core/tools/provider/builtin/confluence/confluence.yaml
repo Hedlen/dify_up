@@ -1,0 +1,64 @@
+identity:
+  author: Peter
+  name: confluence
+  label:
+    en_US: Confluence
+    zh_Hans: Confluence
+    pt_BR: Confluence
+  description:
+    en_US: Confluence
+    zh_Hans: ConfluenceWiki
+    pt_BR: Confluence
+  icon: icon.png
+credentials_for_provider:
+  base_url:
+    type: secret-input
+    required: true
+    label:
+      en_US: Base URL
+      zh_Hans: Api的Base URL
+      pt_BR: Base URL
+    placeholder:
+      en_US: Please input your Wiki server's Base URL
+      zh_Hans: 请输入你的 Wiki 服务器的 Base URL
+      pt_BR: Please input your Wiki server's Base URL
+    url: https://wiki.megvii-inc.com/users
+  username:
+    type: text-input
+    required: true
+    label:
+      en_US: Company Intranet Username
+      zh_Hans: 公司内网登录用户名
+      pt_BR: Company Intranet Username
+    placeholder:
+      en_US: Please input your Company Intranet Username
+      zh_Hans: 请输入你的 Wiki 公司内网登录用户名
+      pt_BR: Please input your Company Intranet Username
+  password:
+    type: text-input
+    required: true
+    label:
+      en_US: Company Intranet Password
+      zh_Hans: 公司内网登录密码
+      pt_BR: Company Intranet Password
+    placeholder:
+      en_US: Please input your Company Intranet Password
+      zh_Hans: 请输入你的 Wiki 公司内网登录密码
+      pt_BR: Please input your Company Intranet Password
+  
+  # access_tokens:
+  #   type: secret-input
+  #   required: true
+  #   label:
+  #     en_US: Access Tokens
+  #     zh_Hans: Access Tokens
+  #     pt_BR: Tokens de acesso
+  #   placeholder:
+  #     en_US: Please input your Confluence Access Tokens
+  #     zh_Hans: 请输入你的 Confluence Access Tokens
+  #     pt_BR: Insira seus Tokens de Acesso do Github
+  #   help:
+  #     en_US: Get your Access Tokens from Confluence
+  #     zh_Hans: 从 Confluence 获取您的 Access Tokens
+  #     pt_BR: Obtenha sua chave da API do Google no Google
+    

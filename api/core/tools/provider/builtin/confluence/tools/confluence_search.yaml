@@ -1,0 +1,42 @@
+identity:
+  name: Confluence_search
+  author: Peter
+  label:
+    en_US: ConfluenceSearch
+    zh_Hans: Confluence搜索
+    pt_BR: ConfluenceSearch
+  icon: icon.png
+description:
+  human:
+    en_US: A tool for performing a company internal Wiki search and extracting snippets and webpages.
+    zh_Hans: 一个用于执行公司内网Confluence搜索并提取。
+    pt_BR: A tool for performing a company internal Wikipedia search and extracting snippets and webpages.
+  llm: A tool for performing a company internal Wikipedia search and extracting snippets and webpages. Input should be a search query.
+parameters:
+  - name: query
+    type: string
+    required: true
+    label:
+      en_US: Query string
+      zh_Hans: 查询语句
+      pt_BR: Query string
+    human_description:
+      en_US: key words for searching
+      zh_Hans: 查询关键词
+      pt_BR: key words for searching
+    llm_description: key words for searching
+    form: llm
+  - name: top_n
+    type: number
+    default: 5
+    required: true
+    label:
+      en_US: Top N
+      zh_Hans: Top N
+      pt_BR: Topo N
+    human_description:
+      en_US: Number of records returned by sorting. 5 is returned by default.
+      zh_Hans: 基于排序返回的记录数, 默认返回5条。
+      pt_BR: Número de registros retornados por classificação com base. 5 é retornado por padrão.
+    llm_description: Extract the first N records from the returned result.
+    form: llm
